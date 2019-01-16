@@ -41,12 +41,12 @@ end
      self
   end
 
-  def self.create(hash) 
+  def self.create(hash)
     dog = self.new(hash)
     dog.save
-    dog 
-  end 
+    dog
+  end
 
-  
+
 
 end
