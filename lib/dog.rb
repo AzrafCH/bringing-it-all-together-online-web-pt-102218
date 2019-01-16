@@ -96,6 +96,9 @@ end
         SELECT * FROM dogs WHERE name = ? AND breed = ?
       SQL
 
+      DB[:conn].excecute(sql, name, breed).first
+
+
 
     end
 end
