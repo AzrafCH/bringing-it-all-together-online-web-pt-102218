@@ -98,11 +98,11 @@ end
 
       DB[:conn].excecute(sql, name, breed).first
 
-      if dog 
+      if dog
         new_dog = self.new_from_db(dog)
-      else 
+      else
         new_dog = self.create({:name => name, :breed => breed})
-      end 
-      new_dog 
+      end
+      new_dog
     end
 end
