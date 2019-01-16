@@ -30,13 +30,15 @@ end
     DB[:conn].execute(sql)
   end
 
-  def save 
-    sql = <<-SQL 
+  def save
+    sql = <<-SQL
       INSERT INTO (name, breed)
       VALUES (?,?)
-    SQL 
+    SQL
 
     DB[:conn].execute(sql, self.name, self.breed)
-    
+    @id = DB[:conn].execute("SELECT last_insert_rowid() FROM dogs")[0][0]
+    self 
+  end
 
 end
