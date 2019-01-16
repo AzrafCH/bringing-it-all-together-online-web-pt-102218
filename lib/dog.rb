@@ -4,7 +4,7 @@ attr_accessor :name, :breed, :id
 
 
 def initialize(attributes)
-  attributes.each do |key, value| 
+  attributes.each do |key, value|
     self.send(("#{key}="), value)
   end
   self.id ||= nil
