@@ -66,7 +66,7 @@ end
       :breed => row[2]
     }
     self.new(attributes)
-  end 
+  end
 
 
 end
