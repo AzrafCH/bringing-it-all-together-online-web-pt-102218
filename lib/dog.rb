@@ -7,6 +7,7 @@ attr_accessor :name, :breed, :id
     attributes.each do |key, value|
       self.send(("#{key=}"), value)
     end
+    self.id ||= nil
   end
 
   def self.create_table
